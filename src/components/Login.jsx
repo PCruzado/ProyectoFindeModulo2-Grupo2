@@ -9,7 +9,15 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 
-const Login = () => {
+const Login = ({setUsuarioLogueado, show, handleClose}) => {
+    cost {
+        register,
+        handleSubmit,
+        formState: { errors },
+
+    } = useForm();
+    cont navegacion = useNavigate()
+    
     return (
         <main>
             <Modal show={show} onHide={handleClse}>
@@ -19,7 +27,13 @@ const Login = () => {
                     </Modal.Title>
                 </Modal.Header>
 <div>
-<Form>
+<Form  onSubmit={(event
+
+            ) => {
+              event.preventDefault()
+              handleSubmit(onSubmit)()
+            }
+            }>
     <Form.Group className="mb-3" controlId="formBasicEmail">
 <Form.Label>Email</Form.Label>
 <Form.Control
