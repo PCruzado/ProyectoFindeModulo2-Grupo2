@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 const Navigation = () => {
   return (
     <Navbar expand="lg" variant="dark" className="bg-vet-purple py-3">
@@ -24,7 +25,7 @@ const Navigation = () => {
           <Nav className="ms-auto align-items-center gap-2">
             <Nav.Link as={Link} to="/" className="text-white">Inicio</Nav.Link>
 
-            <Button variant="light" as={Link} to="/login" className="ms-2">
+            <Button variant="light" as={Link} to="/login" className="ms-2" onClick={handleShow}  to={"/login"} >
               Iniciar sesion
             </Button>
             <Button variant="light" as={Link} to="/registro" className="text-vet-purple fw-bold">
