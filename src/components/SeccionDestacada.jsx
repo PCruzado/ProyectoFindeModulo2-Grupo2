@@ -10,7 +10,7 @@ function CarouselFadeExample() {
       <div class="video-wave">
   <svg viewBox="0 0 1440 320">
     <path 
-      fill="#c2e9d07c" 
+      fill="#c2e9d06e" 
       fill-opacity="1" 
        d="M0,40L80,38C160,36,320,32,480,30C640,28,800,32,960,36C1120,40,1280,44,1360,46L1440,48L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
     </path>
