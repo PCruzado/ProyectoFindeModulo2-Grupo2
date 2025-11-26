@@ -4,9 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navigation from './components/Navigation';
 import { Container } from 'react-bootstrap';
+ login
 import { useEffect, useState } from "react";
 import Login from './components/Login.jsx';
 import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
+
+import SeccionDestacada from './components/SeccionDestacada';
+ dev
 
 function App() {
   const usuarioSessionStorage =
@@ -28,11 +32,14 @@ function App() {
       <Routes>
         <Route path="/" element={
           <main>
-            <section className="bg-light p-5 text-center">
+            <section className="  text-center">
                <h1 style={{ color: 'var(--vet-purple)', fontWeight: 'bold' }}>
                  Bienvenido a Veterinaria Rolling
                </h1>
-               <p className="lead">
+               <div className="me-auto ms-auto">
+               <SeccionDestacada />
+               </div>
+               <p className="lead mt-3">
                  Cuidamos a tus mascotas con el mejor equipo profesional.
                </p>
             </section>
