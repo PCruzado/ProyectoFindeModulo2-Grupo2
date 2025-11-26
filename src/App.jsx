@@ -7,6 +7,7 @@ import { Container } from 'react-bootstrap';
 import { useEffect, useState } from "react";
 import Login from './components/Login.jsx';
 import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
+import Error404 from './components/Error404.jsx';
 
 function App() {
   const usuarioSessionStorage =
@@ -58,7 +59,7 @@ function App() {
         ></Route>
         <Route path="/registro" element={<Container className="mt-5"><h2>Registro</h2></Container>} />
         <Route path="/turnos" element={<Container className="mt-5"><h2>Solicitar Turno</h2></Container>} />
-        <Route path="*" element={<Container className="mt-5"><h2>Error404</h2></Container>} />
+        <Route path="*" element={<Error404 ></Error404>} />
       </Routes>
       
       <footer className="bg-dark text-white text-center py-3 mt-auto">
