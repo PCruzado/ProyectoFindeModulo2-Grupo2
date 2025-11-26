@@ -24,7 +24,7 @@ const Navigation = ({ usuarioLogueado, setUsuarioLogueado }) => {
   return (
     <Navbar expand="lg" variant="dark" className="bg-vet-purple py-3">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fw-bold">
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fw-bold text-black">
 
           <img
             src="/public/img/logovetrolling.png"
@@ -41,11 +41,11 @@ const Navigation = ({ usuarioLogueado, setUsuarioLogueado }) => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center gap-2">
-            <Nav.Link as={Link} to="/" className="text-white">Inicio</Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-black">Inicio</Nav.Link>
 
             {usuarioLogueado ? (
               <>
-                <NavLink className="nav-link" to={"/administrador"}>
+                <NavLink className="nav-link text-black" to={"/administrador"}>
                   Administrador
                 </NavLink>
                 <Button className="text-black nav-link" onClick={logout}>
@@ -53,7 +53,7 @@ const Navigation = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 </Button>
               </>
             ) : (
-              <Button onClick={handleShow} className='text-black nav-link' to={"/login"}>
+              <Button onClick={handleShow} className=' nav-link text-black' to={"/login"}>
                 Iniciar sesión
               </Button>
             )}

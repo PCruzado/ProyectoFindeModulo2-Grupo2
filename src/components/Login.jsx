@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
-import { useState } from 'react';
+/*import { useState } from 'react';*/
 
 import Modal from 'react-bootstrap/Modal';
 
@@ -29,9 +29,9 @@ const Login = ({ setUsuarioLogueado, show, handleClose, handleShow }) => {
     ) {
       //actualizar el state de la sesion del usuario
       setUsuarioLogueado(true)
-      //mostrar un cartel de bienvenido
+      
       Swal.fire({
-        title: "Bienvienido Administrador",
+        title: "Bienvienido a la administración",
         text: "Ingresando al sistema",
         icon: "success",
         //redireccionaria a la papgina del administrador
@@ -63,20 +63,20 @@ const Login = ({ setUsuarioLogueado, show, handleClose, handleShow }) => {
               event.preventDefault()
               handleSubmit(onSubmit)()
             }
-            }>
+            } noValidate>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
                 <Form.Control
-                  type="email"
+                  type="email "
                   placeholder="usuario@email.com"
                   {...register("email", {
                     required: "El email es un dato obligatorio",
                     pattern: {
                       value:
-                        /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                       /^\S+@\S+\.\S+$/,
                       message:
-                        "El email debe cumplir con el siguiente formato correo@dominio.extension",
+                        "El email es incorrecto",
                     },
                   })}
                 />
@@ -92,9 +92,9 @@ const Login = ({ setUsuarioLogueado, show, handleClose, handleShow }) => {
                     required: "La contraseña es un dato obligatorio",
                     pattern: {
                       value:
-                        /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                        /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,10}$/,
                       message:
-                        "La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter especial.",
+                        "La contraseña debe tener entre 6 y 10 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter especial.",
                     },
                   })}
                 />
@@ -106,7 +106,7 @@ const Login = ({ setUsuarioLogueado, show, handleClose, handleShow }) => {
                 <Button variant="primary" type="submit" className="btn-send-shadow">
                   Enviar
                 </Button>
-                <Button className="nav-link text-primary p-1 mt-2" 
+                <Button variant="link" className=" p-1 mt-2" 
                   to={"/administrador"}>
                   Recuperar contraseña
                 </Button>
@@ -125,3 +125,4 @@ const Login = ({ setUsuarioLogueado, show, handleClose, handleShow }) => {
 };
 
 export default Login;
+/*vale*/
