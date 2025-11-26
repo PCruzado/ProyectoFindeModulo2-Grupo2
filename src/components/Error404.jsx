@@ -43,7 +43,7 @@ function Error404() {
                 <img 
                   src={fotoerror404} 
                   alt="Mascota Despistada" 
-                  className="img-fluid rounded-circle border border-5 border-info"
+                  className="img-fluid rounded-circle border border-5 border-success"
                   style={{ maxWidth: '200px', height: 'auto' }}
                   // Manejo de error si la imagen no carga
                   onError={(e) => { e.target.onerror = null; e.target.src='../../public/img/error404.png'; }}
