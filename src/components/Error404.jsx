@@ -30,9 +30,9 @@ function Error404() {
           
              
               {/* Mensaje de Error Temático */}
-              <h2 className="mb-4 text-secondary">
+              <h1 className="mb-4 text-secondary">
                 ¡Ups! Parece que esta página se ha extraviado.
-              </h2>
+              </h1>
               
               <Card.Text className="lead text-dark">
                 Lamentamos el inconveniente. Es posible que uno de nuestros gatitos haya jugado con el cable del servidor o que la dirección que ingresaste no exista.
