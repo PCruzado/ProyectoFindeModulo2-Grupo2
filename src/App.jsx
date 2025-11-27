@@ -12,6 +12,7 @@ import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
 
 import SeccionDestacada from './components/SeccionDestacada';
  dev
+ import Contacto from "./components/Contacto";
 
 function App() {
   const usuarioSessionStorage =
