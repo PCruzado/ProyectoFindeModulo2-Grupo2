@@ -39,6 +39,7 @@ function App() {
         <Route path="/registro" element={<Container className="mt-5"><h2>Registro</h2></Container>} />
         <Route path="/turnos" element={<Container className="mt-5"><h2>Solicitar Turno</h2></Container>} />
         <Route path="/Error404" element={<Container className="mt-5"><h2>Error404</h2></Container>} />
+        <Route path="/contacto" element={<Contacto />} />
       </Routes>
       
       <footer className="bg-dark text-white text-center py-3 mt-auto">
