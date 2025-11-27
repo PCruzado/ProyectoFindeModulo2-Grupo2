@@ -47,21 +47,19 @@ const Contacto = () => {
 
       console.log("Formulario enviado:", formData);
 
-      // Limpiar
       setFormData({ nombre: "", email: "", mensaje: "" });
 
-      // Ocultar alerta después de 3 segundos (opcional)
       setTimeout(() => setEnviado(false), 3000);
     }
   };
 
   return (
-    <div className="p-4" style={{ maxWidth: "600px", margin: "0 auto" }}>
-      <h2 className="mb-4 text-center">Contacto</h2>
+    <div className="p-4 w-50 me-auto ms-auto bg-light rounded shadow-sm mt-4">
+      <h2 className="mb-2 text-center">Contacto</h2>
 
-      {enviado && <Alert variant="success">¡Mensaje enviado con éxito!</Alert>}
+      {enviado && <Alert variant="success">¡Mensaje enviado!</Alert>}
 
-      <Form onSubmit={handleSubmit} noValidate>
+      <Form onSubmit={handleSubmit} noValidate >
         <Form.Group className="mb-3">
           <Form.Label>Nombre</Form.Label>
           <Form.Control
@@ -108,7 +106,7 @@ const Contacto = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="w-100">
+        <Button variant="success" type="submit" className="w-100">
           Enviar
         </Button>
       </Form>
