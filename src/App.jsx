@@ -9,6 +9,7 @@ import SolicitudTurno from "./components/SolicitudTurno"
 import { useEffect, useState } from "react";
 import Login from './components/Login.jsx';
 import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
+import Error404 from './components/Error404.jsx';
 
 import SeccionDestacada from './components/SeccionDestacada';
 import CardServicios from './components/CardServicios.jsx';
@@ -68,7 +69,7 @@ function App() {
         <Route path="/Error404" element={<Container className="mt-5"><h2>Error404</h2></Container>} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/turnos" element={<Container className="mt-5"><h2>Solicitar Turno</h2></Container>} />
-        <Route path="*" element={<Container className="mt-5"><h2>Error404</h2></Container>} />
+        <Route path="*" element={<Error404 ></Error404>} />
       </Routes>
       
       <footer className="bg-dark text-white text-center py-3 mt-auto">
