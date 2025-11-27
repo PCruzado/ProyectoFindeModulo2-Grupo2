@@ -5,14 +5,14 @@ import './App.css';
 import Navigation from './components/Navigation';
 import { Container } from 'react-bootstrap';
 import SolicitudTurno from "./components/SolicitudTurno"
- login
+
 import { useEffect, useState } from "react";
 import Login from './components/Login.jsx';
 import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
 
 import SeccionDestacada from './components/SeccionDestacada';
- dev
- import Contacto from "./components/Contacto";
+import Contacto from './components/Contacto.jsx';
+import CardServicios from './components/CardServicios.jsx';
 
 function App() {
   const usuarioSessionStorage =
@@ -48,9 +48,7 @@ function App() {
 
             <Container className="my-5">
               <h3 className="text-center mb-4">Servicios y Profesionales</h3>
-              <p className="text-center text-muted">
-                (Aquí irán las cards de profesionales y servicios más adelante)
-              </p>
+              <CardServicios/>
             </Container>
           </main>
         } />

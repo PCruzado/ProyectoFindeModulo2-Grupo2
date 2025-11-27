@@ -1,7 +1,6 @@
 
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { NavLink, useNavigate } from "react-router";
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import Login from './Login.jsx';
 
