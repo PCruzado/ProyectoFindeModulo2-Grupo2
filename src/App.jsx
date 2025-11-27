@@ -12,8 +12,8 @@ import ProtectorRutas from './components/routes/ProtectorRutas.jsx';
 import Error404 from './components/Error404.jsx';
 
 import SeccionDestacada from './components/SeccionDestacada';
+import Contacto from './components/Contacto.jsx';
 import CardServicios from './components/CardServicios.jsx';
-
 
 function App() {
   const usuarioSessionStorage =
