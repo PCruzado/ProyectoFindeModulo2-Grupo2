@@ -8,13 +8,13 @@ const Navigation = () => {
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fw-bold">
 
             <img
-              src="/public/img/logovetrolling.png" 
-              width="40"
-              height="40"
-              className="d-inline-block align-top me-2"
-              alt="Logo Veterinaria"
-              style={{ objectFit: 'contain' }}
-            />
+            src="/img/logovetrolling.png"
+            width="45"                    
+            height="45"
+            className="d-inline-block align-top me-2"
+            alt="Logo Veterinaria Rolling"
+            style={{ borderRadius: '50%', objectFit: 'cover' }} 
+           />
             Veterinaria
         </Navbar.Brand>
         
