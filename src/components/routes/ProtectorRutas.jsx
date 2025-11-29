@@ -1,12 +1,9 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import Administracion from "../administracion";
 
-const ProtectorRutas = ({usuarioLogueado}) => {
-    //pregunto si no estoy logueado
-    if(!usuarioLogueado){
-        return <Navigate to={'/'}/>
-    }
-    // si soy efectivamente el admin
-    return <Outlet/>
+const ProtectorRutas = ({ usuarioLogueado }) => {
+  if (!usuarioLogueado) return <Navigate to="/" />;
+  return <Administracion />;
 };
 
 export default ProtectorRutas;
