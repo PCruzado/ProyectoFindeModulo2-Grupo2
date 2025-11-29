@@ -14,6 +14,7 @@ import Error404 from './components/Error404.jsx';
 import SeccionDestacada from './components/SeccionDestacada';
 import Contacto from './components/Contacto.jsx';
 import CardServicios from './components/CardServicios.jsx';
+import SobreNosotros from './components/routes/SobreNosotros.jsx';
 
 function App() {
   const usuarioSessionStorage =
@@ -68,7 +69,7 @@ function App() {
 
           <Route path="/contacto" element={<Contacto />} />
 
-          <Route path="/about" element={<Container className="mt-5"><h2>Sobre Nosotros</h2></Container>} />
+          <Route path="/about" element={<SobreNosotros className="mt-5"><h2>Sobre Nosotros</h2></SobreNosotros>} />
 
           <Route path="*" element={<Error404></Error404>} />
         </Routes>
