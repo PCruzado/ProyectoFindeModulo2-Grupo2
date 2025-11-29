@@ -21,6 +21,7 @@ function App() {
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
   
 
+  
   useEffect(() => {
     sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
   }, [usuarioLogueado]);
