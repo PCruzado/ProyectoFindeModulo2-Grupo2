@@ -54,7 +54,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="p-4 w-50 me-auto ms-auto bg-light rounded shadow-sm mt-4">
+    <div className="p-4 w-50 me-auto ms-auto bg-light rounded shadow-sm mt-4 ">
       <h2 className="mb-2 text-center">Contacto</h2>
 
       {enviado && <Alert variant="success">¡Mensaje enviado!</Alert>}
