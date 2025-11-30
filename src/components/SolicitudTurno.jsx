@@ -114,7 +114,7 @@ const SolicitudTurno = () => {
   horasDisponibles.push("17:00");
 
   return (
-    <Container className="mt-4 mainSection">
+    <Container className="mt-4 mainSection p-4">
       <h2 className="text-center mb-4">Solicitud de Turno</h2>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <fieldset disabled={enviando}>
