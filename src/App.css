@@ -6,6 +6,9 @@
   --vet-dark-purple: #44315C;
   --vet-dark-green: #315C3D;
 }
+.bg-vet-dark-purple {
+  background-color: var(--vet-dark-purple) !important; 
+}
 
 body, #root {
   display: flex;

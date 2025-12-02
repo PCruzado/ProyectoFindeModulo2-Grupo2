@@ -35,18 +35,7 @@ const Navigation = ({ usuarioLogueado, setUsuarioLogueado }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 text-white" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-center gap-3">
-            
-            <NavLink 
-              end 
-              to="/" 
-              className={({ isActive }) => 
-                isActive ? "nav-link text-white fw-bold border-bottom border-2" : "nav-link text-white opacity-75 hover-effect"
-              }
-            >
-              Inicio
-            </NavLink>
-
+          <Nav className="ms-auto align-items-center gap-3">            
             {usuarioLogueado ? (
               <>
                 <NavLink 
@@ -57,47 +46,61 @@ const Navigation = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 >
                   Administrador
                 </NavLink>
+                
                 <Button 
                   variant="outline-light" 
                   onClick={logout} 
                   className="ms-2 px-4 rounded-pill"
                 >
-                  Salir
+                  Cerrar Sesión
                 </Button>
               </>
             ) : (
-              <Button 
-                onClick={handleShow} 
-                className="nav-link text-white opacity-75 hover-effect bg-transparent border-0 p-0"
-              >
-                Iniciar sesión
-              </Button>
-            )}
+              <>
+                <NavLink 
+                  end 
+                  to="/" 
+                  className={({ isActive }) => 
+                    isActive ? "nav-link text-white fw-bold border-bottom border-2" : "nav-link text-white opacity-75 hover-effect"
+                  }
+                >
+                  Inicio
+                </NavLink>
 
-            <Button 
-              as={Link} 
-              to="/registro" 
-              variant="light" 
-              className="text-vet-purple fw-bold px-4 rounded-pill shadow-sm"
-            >
-              Registro
-            </Button>
-            
-            <Button 
-              as={Link} 
-              to="/turnos" 
-              className="btn-vet-green px-4 rounded-pill text-white fw-bold shadow-sm"
-              style={{border: 'none'}}
-            >
-              Solicitar Turno
-            </Button>
+                <Button 
+                  onClick={handleShow} 
+                  className="nav-link text-white opacity-75 hover-effect bg-transparent border-0 p-0"
+                >
+                  Iniciar sesión
+                </Button>
+
+                <Button 
+                  as={Link} 
+                  to="/registro" 
+                  variant="light" 
+                  className="text-vet-purple fw-bold px-4 rounded-pill shadow-sm"
+                >
+                  Registro
+                </Button>
+                
+                <Button 
+                  as={Link} 
+                  to="/turnos" 
+                  className="btn-vet-green px-4 rounded-pill text-white fw-bold shadow-sm"
+                  style={{border: 'none'}}
+                >
+                  Solicitar Turno
+                </Button>
+              </>
+            )}
 
           </Nav>
         </Navbar.Collapse>
-        <Login show={show}
+        <Login 
+          show={show}
           handleClose={handleClose}
-          handleShow={handleShow}
-          setUsuarioLogueado={setUsuarioLogueado} />
+          setUsuarioLogueado={setUsuarioLogueado} 
+        />
       </Container>
     </Navbar>
   );
