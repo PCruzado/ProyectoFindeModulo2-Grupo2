@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
+import Swal from "sweetalert2";
 
 function FormExample() {
   const [validated, setValidated] = useState(false);
@@ -53,7 +54,13 @@ function FormExample() {
     setUsuarios(nuevosUsuarios);
     localStorage.setItem("registroUsuarios", JSON.stringify(nuevosUsuarios));
 
-    alert("Usuario registrado exitosamente!");
+    // alert("Usuario registrado exitosamente!");
+    Swal.fire({
+            title: "Usuario registrado exitosamente!",
+            icon: "success",
+            timer: 2000,
+            showConfirmButton: false
+          })
     form.reset();
     setValidated(false);
   };
@@ -66,17 +73,17 @@ function FormExample() {
         <Row className="mb-3">
           <Form.Group as={Col} md="6" controlId="validationCustom01">
             <Form.Label>Nombre</Form.Label>
-            <Form.Control required type="text" placeholder="Nombre" />
+            <Form.Control required type="text" placeholder="Nombre" minLength={3}/>
             <Form.Control.Feedback type="invalid">
-              Campo Obligatorio.
+              Debe contener al menos 3 caracteres
             </Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group as={Col} md="6" controlId="validationCustom02">
             <Form.Label>Apellido</Form.Label>
-            <Form.Control required type="text" placeholder="Apellido" />
+            <Form.Control required type="text" placeholder="Apellido" minLength={3}/>
             <Form.Control.Feedback type="invalid">
-              Campo Obligatorio.
+              Debe contener al menos 3 caracteres
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
