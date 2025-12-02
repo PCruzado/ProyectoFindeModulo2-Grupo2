@@ -1,16 +1,40 @@
-# React + Vite
+🐾 Veterinaria Rolling – Gestión de Turnos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto final del Módulo 2 – Rolling Code School
+Trabajo grupal orientado a la creación de un sistema web de gestión de turnos para una veterinaria.
 
-Currently, two official plugins are available:
+📌 Descripción del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto consiste en el desarrollo de una página web orientada a la gestión de turnos veterinarios, permitiendo la interacción de dos tipos de usuarios:
 
-## React Compiler
+👤 Usuarios (clientes)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Solicitar turnos para sus mascotas.
 
-## Expanding the ESLint configuration
+Consultar información general sobre la veterinaria.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ver servicios disponibles.
+
+🔐 Administrador
+
+Gestionar turnos (crear, leer, editar, eliminar).
+
+Administrar personal y servicios de la veterinaria.
+
+El enfoque del proyecto está dividido entre un sitio público informativo y un panel de administración privado.
+
+🛠️ Tecnologías utilizadas
+
+HTML5
+
+CSS3
+
+React
+
+React-Bootstrap (componentes y diseño responsivo)
+
+Versionado y Trabajo en Equipo
+
+Git
+
+GitHub 
