@@ -13,6 +13,25 @@ const Administracion = () => {
     if (stored) setTurnos(JSON.parse(stored));
   }, []);
 
+  const verTurno = (turno) => {
+  Swal.fire({
+    title: 'Información del Turno',
+    html: `
+      <div style="text-align: left; font-size: 16px;">
+        <p><strong>Nombre y Apellido:</strong> ${turno.nombreApellido}</p>
+        <p><strong>Nombre Mascota:</strong> ${turno.nombreMascota}</p>
+        <p><strong>Tipo Mascota:</strong> ${turno.tipoMascota}</p>
+        <p><strong>Fecha:</strong> ${DateTime.fromISO(turno.inicio).toLocaleString(DateTime.DATE_SHORT)}</p>
+        <p><strong>Hora:</strong> ${DateTime.fromISO(turno.inicio).toLocaleString(DateTime.TIME_SIMPLE)}</p>
+        <p><strong>Motivo:</strong> ${turno.motivo}</p>
+      </div>
+    `,
+    icon: 'info',
+    confirmButtonColor: '"className="success"',
+    confirmButtonText: 'Cerrar'
+  });
+};
+
  const handleBorrarTurno = (turnoAEliminar) => {
     
     Swal.fire({
