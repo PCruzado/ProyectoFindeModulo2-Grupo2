@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 import { DateTime } from "luxon";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const Administracion = () => {
   const [turnos, setTurnos] = useState([]);
@@ -12,6 +13,41 @@ const Administracion = () => {
     if (stored) setTurnos(JSON.parse(stored));
   }, []);
 
+ const handleBorrarTurno = (turnoAEliminar) => {
+    
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: `Vas a eliminar el turno de ${turnoAEliminar.nombreApellido} para ${turnoAEliminar.nombreMascota}. ¡Esta acción es irreversible!`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#DB8307', 
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Sí, ¡Borrar!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+    
+      if (result.isConfirmed) {
+        
+        
+        const turnosActualizados = turnos.filter(
+          (turno) => turno.inicio !== turnoAEliminar.inicio
+        );
+
+      
+        localStorage.setItem("turnos", JSON.stringify(turnosActualizados));
+        
+       
+        setTurnos(turnosActualizados);
+        
+      
+        Swal.fire(
+          '¡Eliminado!',
+          'El turno ha sido eliminado correctamente.',
+          'success'
+        );
+      }
+    });
+  };
   return (
     <div className="container mt-4">
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -54,7 +90,13 @@ const Administracion = () => {
                 <td className="d-flex gap-2">
                   <Button variant="primary" size="sm">Modificar</Button>
                   <Button variant="info" size="sm">Ver</Button>
-                  <Button variant="danger" size="sm">Borrar</Button>
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={() => handleBorrarTurno(turno)}
+                  >
+                    Borrar
+                  </Button>
                 </td>
               </tr>
             );
