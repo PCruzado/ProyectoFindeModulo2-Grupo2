@@ -81,7 +81,10 @@ const Login = ({ setUsuarioLogueado, show, handleClose }) => {
                 <Button variant="primary" type="submit" className="btn-send-shadow">
                   Enviar
                 </Button>
-                <Button variant="link" className="p-1 mt-2" to={"/administrador"}>
+                <Button variant="link" className="p-1 mt-2" onClick={() => {
+                    handleClose(); 
+                    navegacion("/error404");
+                  }}>
                   Recuperar contraseña
                 </Button>
               </div>
