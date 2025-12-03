@@ -14,6 +14,7 @@ import Contacto from './components/Contacto.jsx';
 import CardServicios from './components/CardServicios.jsx';
 import SobreNosotros from './components/routes/SobreNosotros.jsx';
 import Registro from './components/Registro.jsx';
+import ModificarTurno from './components/ModificarTurno.jsx';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/registro" element={<Registro/>} />
           <Route path="/turnos" element={<SolicitudTurno />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/modificar-turno" element={<ModificarTurno />} />
 
           <Route path="/about" element={<SobreNosotros className="mt-5"><h2>Sobre Nosotros</h2></SobreNosotros>} />
 
