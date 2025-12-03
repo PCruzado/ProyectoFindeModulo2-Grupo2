@@ -17,7 +17,7 @@ const Administracion = () => {
   Swal.fire({
     title: 'Información del Turno',
     html: `
-      <div style="text-align: left; font-size: 16px;">
+      <div style="text-align: left; font-size: 16px; className="dark">
         <p><strong>Nombre y Apellido:</strong> ${turno.nombreApellido}</p>
         <p><strong>Nombre Mascota:</strong> ${turno.nombreMascota}</p>
         <p><strong>Tipo Mascota:</strong> ${turno.tipoMascota}</p>
@@ -27,8 +27,9 @@ const Administracion = () => {
       </div>
     `,
     icon: 'info',
-    confirmButtonColor: '"className="success"',
-    confirmButtonText: 'Cerrar'
+    confirmButtonColor: '#3085d6',
+confirmButtonText: 'Cerrar',
+confirmButtonAriaLabel: 'Cerrar',
   });
 };
 
@@ -108,7 +109,7 @@ const Administracion = () => {
                 <td>{turno.motivo}</td>
                 <td className="d-flex gap-2">
                   <Button variant="primary" size="sm">Modificar</Button>
-                  <Button variant="info" size="sm" onClick={() => verTurno(turno)}>Ver</Button>
+                  <Button variant="success" size="sm" onClick={() => verTurno(turno)}>Ver</Button>
                   <Button
                     variant="danger"
                     size="sm"
