@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import Administracion from "../administracion";
+import Administracion from "../Administracion.jsx";
 
 const ProtectorRutas = ({ usuarioLogueado }) => {
   if (!usuarioLogueado) return <Navigate to="/" />;
