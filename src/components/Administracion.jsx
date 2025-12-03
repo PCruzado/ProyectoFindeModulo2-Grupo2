@@ -108,7 +108,7 @@ const Administracion = () => {
                 <td>{turno.motivo}</td>
                 <td className="d-flex gap-2">
                   <Button variant="primary" size="sm">Modificar</Button>
-                  <Button variant="info" size="sm">Ver</Button>
+                  <Button variant="info" size="sm" onClick={() => verTurno(turno)}>Ver</Button>
                   <Button
                     variant="danger"
                     size="sm"
