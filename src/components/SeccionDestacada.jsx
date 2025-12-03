@@ -35,6 +35,7 @@ function CarouselFadeExample() {
        
         <Button
           variant="outline-light"
+          className="m-3"
           size="lg"
           onClick={() => navigate("/contacto")}
         >
