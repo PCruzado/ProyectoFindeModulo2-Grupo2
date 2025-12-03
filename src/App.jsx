@@ -16,7 +16,6 @@ import SobreNosotros from './components/routes/SobreNosotros.jsx';
 import Registro from './components/Registro.jsx';
 import ModificarTurno from './components/ModificarTurno.jsx';
 
-
 function App() {
   const usuarioSessionStorage = JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
@@ -45,14 +44,12 @@ function App() {
           } />
           <Route path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
           <Route path="/administrador" element={<ProtectorRutas usuarioLogueado={usuarioLogueado} />} />
-          <Route path="/registro" element={<Registro/>} />
+          <Route path="/registro" element={<Registro />} />
           <Route path="/turnos" element={<SolicitudTurno />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/modificar-turno" element={<ModificarTurno />} />
-
           <Route path="/about" element={<SobreNosotros className="mt-5"><h2>Sobre Nosotros</h2></SobreNosotros>} />
-
-          <Route path="*" element={<Error404></Error404>} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </main>
       <Footer />
