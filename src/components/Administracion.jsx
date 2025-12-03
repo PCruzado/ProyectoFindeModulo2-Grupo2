@@ -108,7 +108,15 @@ confirmButtonAriaLabel: 'Cerrar',
                 <td>{dt.toLocaleString(DateTime.TIME_SIMPLE)}</td>
                 <td>{turno.motivo}</td>
                 <td className="d-flex gap-2">
-                  <Button variant="primary" size="sm">Modificar</Button>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() =>
+                      navigate("/modificar-turno", { state: turno })
+                    }
+                  >
+                    Modificar
+                  </Button>
                   <Button variant="success" size="sm" onClick={() => verTurno(turno)}>Ver</Button>
                   <Button
                     variant="danger"
