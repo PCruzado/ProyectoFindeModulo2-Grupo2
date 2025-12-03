@@ -1,4 +1,3 @@
-
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -28,11 +27,15 @@ function CarouselFadeExample() {
           Hemos estado cuidando tanto perros como gatos con amor y profesionalismo desde 1980. Podemos ayudar con todo, desde vacunación y asesoramiento sobre alimentación, hasta diagnósticos y tratamiento de enfermedades complejas.
         </p>
 
-        <Button variant="success" size="lg" className="me-2">
+        <Button
+          variant="success"
+          size="lg"
+          className="me-2"
+          onClick={() => navigate("/turnos")}
+        >
           Agenda tu cita
         </Button>
 
-       
         <Button
           variant="outline-light"
           className="m-3"
